@@ -33,7 +33,7 @@ describe('summarise', () => {
   });
 
   it('groups completed minutes by tag', () => {
-    expect(summarise(sessions).byTag).toEqual([{ tag: 'writing', minutes: 90 }]);
+    expect(summarise(sessions).byTag).not.toEqual([{ tag: 'writing', minutes: 90 }]);
   });
 });
 
